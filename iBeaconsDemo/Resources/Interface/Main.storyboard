@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zae-Ve-oEV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--iBeacons Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIL-aT-lAd">
+                                <rect key="frame" x="20" y="162" width="560" height="120"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <state key="normal" title="Receiver">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bEF-eh-d4x" kind="show" id="zHZ-wf-GYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV2-ni-knb">
+                                <rect key="frame" x="20" y="382" width="560" height="120"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <state key="normal" title="Transmitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="geo-ym-tud" kind="show" id="B2d-FI-AcP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oV2-ni-knb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="3YT-74-reQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oV2-ni-knb" secondAttribute="trailing" constant="4" id="Tuo-Le-xEy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oV2-ni-knb" secondAttribute="bottom" constant="98" id="VId-0u-9al"/>
+                            <constraint firstItem="OIL-aT-lAd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Xxw-8w-p2b"/>
+                            <constraint firstItem="oV2-ni-knb" firstAttribute="top" secondItem="OIL-aT-lAd" secondAttribute="bottom" constant="100" id="ccW-Wb-9dJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OIL-aT-lAd" secondAttribute="trailing" constant="4" id="g23-Io-gZX"/>
+                            <constraint firstItem="OIL-aT-lAd" firstAttribute="height" secondItem="oV2-ni-knb" secondAttribute="height" id="g31-rl-pZW"/>
+                            <constraint firstItem="OIL-aT-lAd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="nwB-FA-Zs4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iBeacons Demo" id="GP4-PB-Rlj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="T6c-a1-LOs"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="329"/>
+        </scene>
+        <!--iBeacon Receiver-->
+        <scene sceneID="P37-vk-kpJ">
+            <objects>
+                <tableViewController id="bEF-eh-d4x" customClass="ReceiverViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hMN-g5-Z0d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="bEF-eh-d4x" id="Pci-TO-iSy"/>
+                            <outlet property="delegate" destination="bEF-eh-d4x" id="Kzj-XO-l9D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="iBeacon Receiver" id="2Jl-aQ-0HN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqE-Oc-fb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="-110"/>
+        </scene>
+        <!--iBeacons Transmitter-->
+        <scene sceneID="7z3-7Q-iKh">
+            <objects>
+                <viewController id="geo-ym-tud" customClass="TransmitterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4zI-d1-Y2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="mvM-5p-7tZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e3i-M8-U2f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-rm-xTn">
+                                <rect key="frame" x="200" y="107" width="200" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qbt-ze-EL3" userLabel="UUID">
+                                <rect key="frame" x="16" y="361" width="568" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hy0-xG-THV" userLabel="Major Minor">
+                                <rect key="frame" x="16" y="398" width="568" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qbt-ze-EL3" firstAttribute="trailing" secondItem="e3i-M8-U2f" secondAttribute="trailingMargin" id="FJP-9I-bbH"/>
+                            <constraint firstItem="hy0-xG-THV" firstAttribute="top" secondItem="Qbt-ze-EL3" secondAttribute="bottom" constant="8" id="Sk9-Kq-CqJ"/>
+                            <constraint firstItem="Qbt-ze-EL3" firstAttribute="top" secondItem="8fZ-rm-xTn" secondAttribute="bottom" constant="54" id="WAT-g0-uP8"/>
+                            <constraint firstItem="Qbt-ze-EL3" firstAttribute="leading" secondItem="e3i-M8-U2f" secondAttribute="leadingMargin" id="gbP-M6-2CU"/>
+                            <constraint firstItem="hy0-xG-THV" firstAttribute="leading" secondItem="e3i-M8-U2f" secondAttribute="leadingMargin" id="hcd-qc-ywt"/>
+                            <constraint firstAttribute="centerX" secondItem="8fZ-rm-xTn" secondAttribute="centerX" id="ieM-D6-zHu"/>
+                            <constraint firstItem="8fZ-rm-xTn" firstAttribute="top" secondItem="4zI-d1-Y2Q" secondAttribute="bottom" constant="43" id="mcM-tD-eDL"/>
+                            <constraint firstItem="hy0-xG-THV" firstAttribute="trailing" secondItem="e3i-M8-U2f" secondAttribute="trailingMargin" id="v9f-FJ-5Vn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iBeacons Transmitter" id="DZn-oi-eAG"/>
+                    <connections>
+                        <outlet property="majorMinor" destination="hy0-xG-THV" id="hH9-ZE-sZe"/>
+                        <outlet property="uuid" destination="Qbt-ze-EL3" id="YjG-Oc-hZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oso-M8-IRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="In3-fd-czg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zae-Ve-oEV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uP4-O8-BrR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="07K-Uw-w7B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebz-Ot-nH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="-306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="200" height="200"/>
+    </resources>
+</document>
